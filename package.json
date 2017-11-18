@@ -1,0 +1,32 @@
+{
+  "name": "tstraverse",
+  "version": "0.1.0",
+  "description": "A Typescript AST traversal tool for making static analysis tools easier to build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmstead/tstraverse.git"
+  },
+  "keywords": [
+    "Typescript",
+    "AST",
+    "static-analysis",
+    "traversal"
+  ],
+  "author": "Chris Stead",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/cmstead/tstraverse/issues"
+  },
+  "homepage": "https://github.com/cmstead/tstraverse#readme",
+  "dependencies": {
+    "signet": "^6.4.2",
+    "typescript": "^2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0"
+  }
+}
