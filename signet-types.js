@@ -2,25 +2,16 @@
 
 const signet = require('signet')();
 
-signet.defineDuckType('traverseOptions', {
-    enter: '?function',
-    leave: '?function'
+signet.alias('action', 'function<syntaxTreeNode => undefined>');
+
+signet.defineDuckType('traverseActions', {
+    enter: '?action',
+    leave: '?action'
 });
 
 signet.defineDuckType('syntaxTreeNode', {
     pos: 'int',
-    end: 'int',
-    flags: 'int'
-});
-
-signet.alias('action', 'function<syntaxTreeNode => *>');
-signet.alias('matchCheck', 'function<syntaxTreeNode => boolean>');
-signet.alias('propertyKey', 'variant<string, number, symbol>');
-signet.alias('propertyMatchCriteria', 'variant<*>');
-
-signet.defineDuckType('propertyMatchData', {
-    propertyKey: 'propertyKey',
-    matchCriteria: 'propertyMatchCriteria'
+    end: 'int'
 });
 
 

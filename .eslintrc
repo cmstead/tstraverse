@@ -92,7 +92,12 @@
     "no-path-concat": 2
   },
   "globals": {
+    "console": false,
     "module": false,
-    "require": false
+    "require": false,
+
+    "beforeEach": false,
+    "describe": false,
+    "it": false
   }
 }

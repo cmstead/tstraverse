@@ -4,7 +4,7 @@
   "description": "A Typescript AST traversal tool for making static analysis tools easier to build",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/mocha/bin/mocha ./tests/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -23,10 +23,13 @@
   },
   "homepage": "https://github.com/cmstead/tstraverse#readme",
   "dependencies": {
-    "signet": "^6.4.2",
-    "typescript": "^2.6.1"
+    "signet": "^6.4.2"
   },
   "devDependencies": {
-    "eslint": "^4.11.0"
+    "chai": "^4.2.0",
+    "eslint": "^4.11.0",
+    "mocha": "^5.2.0",
+    "sinon": "^6.3.4",
+    "typescript": "^2.9.2"
   }
 }
