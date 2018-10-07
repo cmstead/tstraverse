@@ -14,13 +14,9 @@ describe('Traverse', function () {
 
     beforeEach(function () {
         const sourceCode = fs.readFileSync('./tests/fixtures/Sample.ts', { encoding: 'utf8' });
+        const fileName = 'Sample.ts';
 
-        sourceFile = typescript.createSourceFile(
-            'Sample.ts',
-            sourceCode,
-            typescript.ScriptTarget.ES2015,
-            true,
-            typescript.compilerOptions);
+        sourceFile = tstraverse.helpers.parse(sourceCode, fileName);
     });
 
     it('calls enter function on each node throughout traversal', function () {
@@ -29,7 +25,7 @@ describe('Traverse', function () {
             enter: enterSpy
         });
 
-        assert.equal(27, enterSpy.callCount);
+        assert.equal(28, enterSpy.callCount);
     });
 
     it('calls leave function on each node throughout traversal', function () {
@@ -38,7 +34,7 @@ describe('Traverse', function () {
             leave: leaveSpy
         });
 
-        assert.equal(27, leaveSpy.callCount);
+        assert.equal(28, leaveSpy.callCount);
     });
 
     it('calls enter and leave functions as a matched pair', function () {

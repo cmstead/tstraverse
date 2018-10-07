@@ -5,9 +5,9 @@ const utilities = require('./utilities');
 
 const noOp = () => null;
 
-function traverse(node, options) {
-    const enter = utilities.either('function', noOp, options.enter);
-    const leave = utilities.either('function', noOp, options.leave);
+function traverse(syntaxTreeNode, traverseActions) {
+    const enter = utilities.either('function', noOp, traverseActions.enter);
+    const leave = utilities.either('function', noOp, traverseActions.leave);
 
     function traverseNode(node) {
         enter(node);
@@ -17,7 +17,7 @@ function traverse(node, options) {
         leave(node);
     }
 
-    traverseNode(node);
+    traverseNode(syntaxTreeNode);
 }
 
 module.exports = signet.enforce(

@@ -5,7 +5,7 @@ class Sample {
         this.foo = "bar";
     }
 
-    doStuff() {
+    doStuff(): void {
         console.log(this.foo);
     }
 }
