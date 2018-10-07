@@ -1,6 +1,6 @@
 {
   "name": "tstraverse",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A Typescript AST traversal tool for making static analysis tools easier to build",
   "main": "index.js",
   "scripts": {
