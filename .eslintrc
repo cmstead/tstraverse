@@ -92,6 +92,7 @@
     "no-path-concat": 2
   },
   "globals": {
+    "__dirname": false,
     "console": false,
     "module": false,
     "require": false,

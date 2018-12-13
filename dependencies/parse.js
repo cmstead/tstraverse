@@ -1,10 +1,10 @@
 'use strict';
 
 const signet = require('../signet-types');
-const typescriptHelpers = require('./typescriptHelpers');
+const { createSourceFile } = require('./typescriptHelpers');
 
 function parse(sourceString, sourceFileName = 'source.ts') {
-    const sourceFile = typescriptHelpers.createSourceFile(sourceFileName, sourceString);
+    const sourceFile = createSourceFile(sourceFileName, sourceString);
 
     return sourceFile;
 }
