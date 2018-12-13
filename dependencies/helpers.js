@@ -1,12 +1,12 @@
 'use strict';
 
-const typescript = require('typescript');
 const signet = require('../signet-types');
+const typescriptHelpers = require('./typescriptHelpers');
 
 function matchesSyntaxKind(syntaxKind) {
     const isSelectedKind = signet.isTypeOf(`syntaxKind<${syntaxKind}>`);
 
-    return value => isSelectedKind(typescript.SyntaxKind[value.kind]);
+    return value => isSelectedKind(typescriptHelpers.getSyntaxKind(value));
 }
 
 module.exports = {

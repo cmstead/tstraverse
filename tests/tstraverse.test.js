@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 
-const typescript = require('typescript');
 const sinon = require('sinon');
 const { assert } = require('chai');
 
